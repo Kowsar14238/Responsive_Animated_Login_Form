@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merriweather:wght@300&family=Poppins&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Poppins', 'sans-serif';
+}
+.login-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('../images/back.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: anumateBg 5s linear infinite;
+}
+@keyframes anumateBg {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.login-box{
+    position: relative;
+    width: 50vh;
+    height: 45vh;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    
+}
+.login-box form h1{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.login-box .input-box{
+    position: relative;
+    width: 300px;
+    margin: 40px 0;
+    border-bottom: 2px solid #fff;
+}
+.login-box .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #d7c6a7;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.login-box .input-box input:focus~label,
+    .login-box .input-box input:valid~label{
+    top: -5px;
+}
+.login-box .input-box input{
+    width: 100%;
+    height: 50px;
+    background:transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #ffffff;
+    padding: 0 35px 0 5px; /* Error */
+}
+.login-box .input-box .material-symbols-outlined{
+    position: absolute;
+    right: -35px;
+    color: #d7c6a7;
+    font-size: 1.5em;
+    line-height: 57px;
+}
+.remember-forgot{
+    margin: -15px 0 15px;
+    font-size: 0.9em;
+    color: #d7c6a7;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: #d7c6a7;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.login-box button{
+    width: 100%;
+    height: 40px;
+    background: #0e89b6;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+.register-link{
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register-link p a{
+    color: #d7c6a7;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover{
+    text-decoration: underline;
+}
+
+
+@media(max-width:360px){
+    .login-box{
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+
+    .input-box{
+        width: 290px;
+    }
+}
